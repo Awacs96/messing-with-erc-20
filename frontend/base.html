@@ -1,12 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" contect="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>DEX ERC-20</title>
 </head>
 <body>
-    <div class="container"></div>
+    <div class="container">
+        <h2>General information</h2>
+        <div class="row">
+            <div class="item">
+                <h3>Token price: <span id="tokenPrice"></span></h3>
+                <button onClick="getPrice()">Update price</button>
+            </div>
+            <div class="item">
+                <h3>Tokens available: <span id="tokensAvailable"></span></h3>
+                <button onClick="getAvailableTokens()">Update tokens available</button>
+            </div>
+            <div class="item">
+                <h3>Token balance: <span id="tokenPrice"></span></h3>
+                <button onClick="getTokenBalance()">Update balance</button>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <h2>General information</h2>
+        <div class="row">
+            <div class="item">
+                <h3>Grant DEX Access</h3>
+                <div>
+                    <input type="number" min="0" placeholder="Enter the number of tokens" id="tokenGrant" />
+                    <button onClick="grantAccess()">Grant</button>
+                </div>
+            </div>
+            <div class="item">
+                <h3>Sell tokens</h3>
+                <button onClick="sell()">Sell</button>
+            </div>
+        </div>
+    </div>
+    
     <script
         scr="https://cdn.ethers.io/lib/ethers-5.2.umd.min.js"
         type="application/javascript"
