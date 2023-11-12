@@ -8,10 +8,10 @@ const hre = require("hardhat");
 const fs = require("fs/promises");
 
 async function main() {
-  const Token = hre.ethers.getContractFactory("Token");
+  const Token = await hre.ethers.getContractFactory("Token");
   const token = await Token.deploy("100");
 
-  const Dex = hre.ethers.getContractFactory("Dex");
+  const Dex = await hre.ethers.getContractFactory("Dex");
   const dex = await Dex.deploy((await token).address, 1000);
 
   await token.deployed();

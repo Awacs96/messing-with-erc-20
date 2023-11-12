@@ -4,7 +4,7 @@ pragma solidity ^0.8.9;
 
 import "@openzeppelin/contracts/token/ERC20/IERC20.sol";
 
-contract DEX {
+contract Dex {
     IERC20 public associatedToken;
 
     uint price;
